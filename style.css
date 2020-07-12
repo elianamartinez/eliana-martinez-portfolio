@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0px auto;
+	font-family: "Poppins", sans-serif;
+	font-size: 18px; /*tamaño de fuente*/
+}
+
+/* estilos de menu */
+nav {
+	height: 60px; /* alto de la parte nav*/
+	width: 100%;
+	background-color: #eebb4d;
+	top: 0;
+	position: fixed; /* esto es para que la barra de nav este fija arriba*/
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	z-index: 5;
+}
+
+ul {
+	list-style: none; /* es para que no se muestre los circulos de la lista*/
+	font-weight: bold; /*peso de fuente*/
+	font-size: 24px; /*tamaño de fuente*/
+}
+
+a {
+	text-decoration: none; /* es para que no se muestre el subrayado del enlace*/
+	color: white;
+}
+
+li a:hover {
+	color: #184d47;
+}
+
+nav ul {
+	display: flex;
+	width: 40%;
+	justify-content: space-evenly; /* es el espacio entre los elementos de la lista*/
+}
+
+/*mi nombre*/
+header {
+	background-image: url("./imagen/arnold-francisca-f77Bh3inUpE-unsplash.jpg");
+	width: 100%;
+	height: 650px;
+	background-size: cover;
+	background-position: relative; /* esto es para centrar la imagen*/
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.transbox:before {
+	content: "";
+	width: 100%;
+	height: 650px;
+	background-color: #184d47;
+	position: absolute;
+	opacity: 0.8;
+}
+.transbox h1,
+h2 {
+	position: relative;
+}
+
+h1 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700; /*peso de fuente*/
+	font-size: 50px;
+	color: white;
+	text-align: center;
+}
+
+.transbox h2 {
+	font-weight: 500;
+	font-family: "Fredoka One", cursive;
+	color: #eebb4d;
+	text-align: center;
+	padding: 20px;
+}
+
+/*contenido*/
+.contenedor {
+	background-color: #96bb7c;
+	width: 100%;
+	min-height: 800px;
+}
+
+.flex-container {
+	display: flex; /* se vuelve flexible el contenedor*/
+	flex-direction: row; /*de izquierda a derecha los elementos*/
+	flex-wrap: wrap; /*se ajustara si es necesario, en varias líneas (wrap)*/
+	justify-content: space-evenly; /* es el espacio entre los elementos de la lista*/
+	align-content: space-around; /* espacio antes,entre y despues de los elementos*/
+}
+
+h3 {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700; /*peso de fuente*/
+	font-size: 30px;
+	text-align: center;
+	padding: 80px 20px 30px;
+}
+
+.contenedor p {
+	text-align: center;
+	font-family: "Fredoka One", cursive;
+	font-size: 20px;
+	padding: 10px;
+	color: black;
+}
+
+img {
+	width: 400px;
+	height: auto;
+	border-radius: 10px;
+}
+
+.project {
+	margin: 16px 0;
+}
+
+/*contacto*/
+footer {
+	min-height: 120px;
+	background-color: #184d47;
+	padding: 16px;
+}
+
+.contacto {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 32px;
+}
+
+footer li a:hover {
+	background-color: #99b898;
+}
+
+footer h4 {
+	font-style: italic;
+	font-weight: 700;
+	color: #eebb4d;
+	text-align: center;
+	padding: 0 0 20px 0;
+}
+.final {
+	margin-bottom: 30px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 600px) {
+	nav {
+		height: auto;
+		justify-content: center;
+		position: static;
+	}
+
+	nav ul {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		margin: 32px 0;
+	}
+
+	.contacto {
+		flex-direction: column;
+	}
+}
